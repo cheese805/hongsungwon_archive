@@ -108,7 +108,6 @@ body {
   transition: transform .2s ease;
 }
 .fixed-icons img:hover{ transform: scale(1.1); }
- }
 
 /* ---------- 메뉴 팝업: 레일 중앙 기준 ---------- */
 #menu-popup {
