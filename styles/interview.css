@@ -135,8 +135,7 @@ body{
   position: fixed;
   bottom: 20px;
 
-  /* 레일 중앙 좌표를 기준으로 */
-  left: calc(var(--frame-left) + var(--rail-w)/2 + var(--rail-border)/2);
+  left: calc(var(--frame-left) + var(--rail-w)/2 - 12px) 
   transform: translateX(0);
 
   background: #fff;
@@ -168,7 +167,7 @@ body{
     right: auto !important;
   }
   .fixed-icons{
-    left: calc(var(--frame-left) + var(--rail-w)/2 - 12px); !important;
+    left: calc(var(--frame-left) + var(--rail-w)/2 - 12px) !important;
     transform: translateX(-50%) !important;
   }
 }
