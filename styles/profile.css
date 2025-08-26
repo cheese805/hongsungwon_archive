@@ -64,6 +64,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.main-content {
+  height: 100vh;
   overflow-y: scroll;
 }
 
