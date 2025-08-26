@@ -1,8 +1,17 @@
 @font-face {
   font-family: 'Pretendard';
-  src: url('../fonts/Pretendard-Light.woff') format('woff2'); /* ← 확장자/format 불일치 */
+  src: url('../fonts/Pretendard-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
 }
-
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
 @font-face {
   font-family: 'Melodrame';
   src: url('../fonts/Melodrame.woff2') format('woff2');
@@ -76,11 +85,12 @@ body {
   top: 10px;
   width: 100%;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: #000;
   padding-bottom: 8px;
   border-bottom: 1.5px solid #000;
   z-index: 20;
+  font-weight: 200;
 }
 
 .title {
