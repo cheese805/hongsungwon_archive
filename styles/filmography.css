@@ -236,7 +236,7 @@ body {
     right: auto !important;
   }
   .fixed-icons{
-    left: var(--rail-center-x) !important;
+    left: calc(var(--frame-left) + var(--rail-w)/2 - 12px); !important;
     transform: translateX(-50%) !important;
   }
 }
