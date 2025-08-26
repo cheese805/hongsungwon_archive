@@ -108,9 +108,7 @@ body{
 .fixed-icons{
   position: fixed;
   bottom: 20px;
-
-  /* 프레임 왼쪽 + 레일 중앙(보더 0.5px 보정) */
-  left: calc(var(--frame-left) + var(--rail-w)/2 + var(--rail-border)/2);
+  left: calc(var(--frame-left) + var(--rail-w)/2 - 12px) 
 
   /* 중앙 기준에서 살짝 왼쪽으로 미세조정 (원하면 숫자 조절) */
   transform: translateX(calc(-50% - 20px));
@@ -164,7 +162,7 @@ body{
     right: auto !important;
   }
   .fixed-icons{
-    left: calc(var(--frame-left) + var(--rail-w)/2 - 12px); !important;
+    left: calc(var(--frame-left) + var(--rail-w)/2 - 12px) !important;
     transform: translateX(-50%) !important;
   }
 }
