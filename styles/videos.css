@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'Pretendard';
   src: url('../fonts/Pretendard-ExtraLight.woff2') format('woff2');
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
   font-display: block;
 }
@@ -94,12 +94,12 @@ body {
 
 /* ---------- 본문(비디오 리스트) ---------- */
 .video-list { width: 100%; padding-top: 35px; }
-.category{ border-top:1px solid #bfcdd6; padding:12px; cursor:pointer; display:flex; align-items:center; gap:6px; font-size:20px; font-weight:300; }
+.category{ border-top:1px solid #bfcdd6; padding:12px; cursor:pointer; display:flex; align-items:center; gap:6px; font-size:20px; font-weight:400; }
 .category:first-of-type{ border-top:none; }
 .arrow-icon{ width:12px; height:auto; }
 .sub-list{ display:none; padding:0 25px 0 40px; background:#fafafa; border-top:1px solid #bfcdd6; }
 .sub-item{ font-family: 'Pretendard'; padding:8px 0; font-size:15px; }
-.sub-item a{ font-family: 'Pretendard'; font-size:16px; font-weight:250; text-decoration:none; color:#000; }
+.sub-item a{ font-family: 'Pretendard'; font-size:16px; font-weight:200; text-decoration:none; color:#000; }
 .sub-item a:hover{ text-decoration:underline; }
 
 /* ---------- 좌측 하단 아이콘 ---------- */
