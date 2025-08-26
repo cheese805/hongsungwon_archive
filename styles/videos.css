@@ -94,7 +94,7 @@ body {
 
 /* ---------- 본문(비디오 리스트) ---------- */
 .video-list { width: 100%; padding-top: 35px; }
-.category{ border-top:1px solid #bfcdd6; padding:12px; cursor:pointer; display:flex; align-items:center; gap:6px; font-size:20px; font-weight:400; }
+.category{ border-top:1px solid #bfcdd6; padding:12px; cursor:pointer; display:flex; align-items:center; gap:6px; font-size:20px; font-weight:300; }
 .category:first-of-type{ border-top:none; }
 .arrow-icon{ width:12px; height:auto; }
 .sub-list{ display:none; padding:0 25px 0 40px; background:#fafafa; border-top:1px solid #bfcdd6; }
