@@ -64,13 +64,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: hidden;
   overflow-y: scroll;
 }
-.main-content {
-  height: 100vh;
-  overflow-y: scroll;
-}
+
 
 /* ---------- 전체 레이아웃(프레임) ---------- */
 .profile-page {
