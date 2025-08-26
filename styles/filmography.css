@@ -178,16 +178,15 @@ body {
 }
 
 /* ---------- 좌측 하단 아이콘 ---------- */
-/* ❗요구대로: '레일 왼쪽 칸'에 고정(가운데 정렬) */
-.fixed-icons{
+.fixed-icons {
   position: fixed;
   bottom: 20px;
-  left: calc(var(--frame-left) + var(--rail-w) / 2 + var(--rail-border) / 2);
+  left: calc(var(--frame-left) + var(--rail-w)/2 - 12px);  /* 아이콘 크기에 따라 조정 */
+
   display: flex;
   flex-direction: column;
   gap: 12px;
   z-index: 9999;
-  transform: translateX(calc(-50% - 20px));
 }
 .fixed-icons img{
   width: var(--icon-size);
