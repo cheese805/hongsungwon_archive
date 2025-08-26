@@ -50,6 +50,7 @@ body{
   font-family: 'Pretendard', sans-serif;
   display: flex;
   justify-content: center;
+  font-weight: 300;
   align-items: flex-start;
   overflow-y: scroll;               /* 항상 스크롤바 예약 */
 }
@@ -106,7 +107,7 @@ body{
 .interview-list{ list-style:none; padding:0; margin:0; }
 .interview-list li{ margin-bottom:16px; }
 .interview-list a{
-  text-decoration:none; color:#000; font-size:18px; font-weight:400; line-height:1.6;
+  text-decoration:none; color:#000; font-size:18px; line-height:1.6;
 }
 .interview-list a:hover{ text-decoration:underline; }
 
