@@ -213,8 +213,6 @@ body {
   position: fixed;
   bottom: 20px;
 
-  /* 기존에는 left: 20px 등으로 돼 있었을 것 같은데, 
-     좌측 레일 중앙 기준으로 맞추려면 이 계산식 필요해 */
   left: calc(var(--frame-left) + var(--rail-w)/2 - 12px);  /* 아이콘 크기에 따라 조정 */
 
   display: flex;
@@ -269,7 +267,7 @@ body {
     right: auto !important;
   }
   .fixed-icons{
-    left: calc(var(--frame-left) + var(--rail-w)/2 - 12px); !important;
+    left: calc(var(--frame-left) + var(--rail-w)/2 - 12px) !important;
     transform: translateX(-50%) !important;
   }
 }
