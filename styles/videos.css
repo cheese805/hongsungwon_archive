@@ -1,7 +1,7 @@
 /* ---------- 폰트 ---------- */
 @font-face {
   font-family: 'Pretendard';
-  src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  src: url('../fonts/Pretendard-ExtraLight.woff2') format('woff2');
   font-weight: 400; font-style: normal; font-display: block;
 }
 @font-face {
@@ -37,6 +37,11 @@ html, body {
   overscroll-behavior-x: none;
   touch-action: pan-y;             /* 세로만 스크롤 */
   scrollbar-gutter: stable both-edges; /* 스크롤 유무와 상관없이 가로폭 고정 */
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 200;
+  font-variation-settings: "wght" 200;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* 바깥 레터박스(검정) + 프레임 중앙 배치 */
