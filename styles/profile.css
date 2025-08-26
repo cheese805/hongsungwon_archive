@@ -1,28 +1,28 @@
 /* ---------- 폰트 ---------- */
 @font-face {
   font-family: 'Pretendard';
-  src: url('../fonts/Pretendard-ExtraLight.woff2') format('woff2');
+  src: url('/fonts/Pretendard-ExtraLight.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: 'Pretendard';
-  src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: 'Melodrame';
-  src: url('../fonts/Melodrame.woff2') format('woff2');
+  src: url('/fonts/Melodrame.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: 'Quentin';
-  src: url('../fonts/Quentin.woff2') format('woff2');
+  src: url('/fonts/Quentin.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: block; 
@@ -54,6 +54,11 @@ html, body {
   overscroll-behavior-x: none;
   touch-action: pan-y;
   scrollbar-gutter: stable both-edges;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 200;
+  font-variation-settings: "wght" 200;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 @supports not (overflow: clip){ html, body{ overflow-x:hidden; } }
 
