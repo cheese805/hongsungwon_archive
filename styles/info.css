@@ -1,0 +1,244 @@
+/* ---------- 폰트 ---------- */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Melodrame';
+  src: url('../fonts/Melodrame.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Quentin';
+  src: url('../fonts/Quentin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* ---------- 공통 변수 ---------- */
+:root{
+  --se-aspect: 0.5625;                 /* 375/667 */
+  --frame-w: min(100svw, calc(100dvh * var(--se-aspect)));
+  --frame-left: calc((100svw - var(--frame-w)) / 2);
+
+  /* 레일/아이콘/팝업 규격 */
+  --rail-w: 70px;                      
+  --rail-border: 1px;
+  --icon-size: 25px;
+
+  /* 레일 중앙 좌표 (공용) */
+  --rail-center-x: calc(var(--frame-left) + var(--rail-w)/2 + var(--rail-border)/2);
+}
+
+/* ---------- 리셋 & 바깥 프레임 ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  background: #000;                  /* 좌우 레터박스 */
+  color: #222;
+  font-family: 'Pretendard', sans-serif;
+  display: flex;
+  justify-content: center;           /* 가로만 중앙 */
+  align-items: flex-start;           /* 세로는 위에서 시작 */
+  overflow-y: auto;                  /* 세로 스크롤 허용 */
+}
+
+/* ---------- 전체 레이아웃(프레임) ---------- */
+.profile-page {
+  position: relative;
+  width: min(100vw, calc(100dvh * var(--se-aspect))); /* 가로 상한 */
+  min-height: 100dvh;                                  /* 세로 최소 */
+  height: auto;                                        /* 내용만큼 증가 */
+  background: #fafafa;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  /* overflow: hidden; */
+  container-type: inline-size;
+}
+
+/* ---------- 좌측 레일 ---------- */
+.left-rail {
+  background: #fafafa;
+  border-right: 1px solid #000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 65px;
+  padding-top: 20px;
+  position: relative;
+
+  /* ⬇️ min-height:100vh 제거 */
+  min-height: unset;
+  align-self: stretch;
+}
+
+.rail-inner {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  position: relative;
+}
+
+/* Hong Sungwon */
+.side-name {
+  position: absolute;
+  top: -170px;
+  left: -15px;
+  font-family: 'Quentin', cursive;
+  font-size: 25px;
+  color: #ACBFCD;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Profile */
+.side-profile {
+  position: absolute;
+  top: -145px;
+  left: -15px;
+  font-family: 'Melodrame', serif;
+  font-size: 25px;
+  color: #000;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ---------- 본문 ---------- */
+.info-content {
+  padding: 50px 40px;
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.info-content h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.info-content p {
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 1.6;
+}
+.feedback-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 14px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  font-weight: 500;
+}
+.feedback-btn:hover { background: #f4f4f4; }
+
+/* ---------- 아이콘 ---------- */
+.fixed-icons {
+  position: fixed;
+  bottom: 20px;
+  left: calc(max(20px, var(--frame-left) + 20px));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+  pointer-events: auto;
+}
+.fixed-icons img {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.fixed-icons img:hover { transform: scale(1.1); }
+
+/* ---------- 메뉴 팝업: 레일 중앙 기준 ---------- */
+#menu-popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+
+  /* 레일 중앙 좌표를 기준으로 */
+  left: calc(var(--frame-left) + var(--rail-w)/2 + var(--rail-border)/2);
+  transform: translateX(0);
+
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  padding: 8px 0;
+  z-index: 2000;
+}
+#menu-popup a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Melodrame', serif;
+  font-size: 20px;
+}
+#menu-popup a:hover { background: #f0f0f0; }
+
+/* ---------- 모바일: vw 기준으로 좌표 재계산 ---------- */
+@media (hover:none) and (pointer:coarse){
+  :root{
+    --frame-w: min(100vw, calc(100dvh * var(--se-aspect)));
+    --frame-left: calc((100vw - var(--frame-w)) / 2);
+    --rail-center-x: calc(var(--frame-left) + var(--rail-w)/2 + var(--rail-border)/2);
+  }
+  #menu-popup{
+    left: var(--rail-center-x) !important;
+    transform: translateX(0) !important;
+    right: auto !important;
+  }
+  .fixed-icons{
+    left: var(--rail-center-x) !important;
+    transform: translateX(-50%) !important;
+  }
+}
+/* === 팝업 박스 위치만 수정 (아이콘 건드리지 않음) === */
+:root { 
+  --popup-gap: 16px;  /* ← 아이콘-팝업 사이 간격. 크게 하고 싶으면 값만 늘려! */
+}
+
+/* PC 포함 전체 */
+#menu-popup{
+  left: calc(var(--frame-left) + var(--rail-w) + var(--rail-border) + var(--popup-gap)) !important;
+  transform: translateX(0) !important;
+  right: auto !important;
+}
+
+/* 모바일 주소창 변화 대응: vw 기준 재계산 */
+@media (hover:none) and (pointer:coarse){
+  :root{
+    --frame-w: min(100vw, calc(100dvh * var(--se-aspect)));
+    --frame-left: calc((100vw - var(--frame-w)) / 2);
+  }
+  #menu-popup{
+    left: calc(var(--frame-left) + var(--rail-w) + var(--rail-border) + var(--popup-gap)) !important;
+  }
+}
+
+/* ---------- iOS 하단 여백 대응 ---------- */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  #info-tab {
+    padding-bottom: calc(40px + env(safe-area-inset-bottom));
+  }
+}
+
+/* (선택) iOS 글자 자동축소 방지 */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }

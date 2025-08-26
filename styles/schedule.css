@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'Quentin';
+  src: url('../fonts/Quentin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Melodrame';
+  src: url('../fonts/Melodrame.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  margin: 0;
+  font-family: 'Melodrame', serif;
+  background: #fff;
+}
+
+top-rail {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+}
+
+.rail-inner {
+  position: relative;
+  height: 40px; /* 높이는 필요에 맞게 */
+}
+
+/* Hong Sungwon */
+.side-name {
+  position: absolute;
+  top: 15px;        /* 위쪽 위치 조정 */
+  right: 10px;     /* ← Hong Sungwon의 오른쪽 여백 */
+  font-family: 'Quentin', cursive;
+  font-size: 28px;
+  color: #ACBFCD;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Schedule */
+.side-profile {
+  position: absolute;
+  top: 15px;        /* 위쪽 위치 조정 */
+  right: 50px;      /* ← Schedule의 오른쪽 여백 */
+  font-family: 'Melodrame', serif;
+  font-size: 28px;
+  color: #000;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* 구분선 */
+.rail-line {
+  border: none;
+  border-top: 1px solid #000;
+  margin-top: 8px;
+}
+
+/* 캘린더 */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+/* 달력 컨테이너 위치 조정 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.calendar-container {
+  height: calc(100vh - 100px); /* 상단 레일+제목 제외 */
+  padding: 0 10px; /* 좌우 여백 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* 셀 너비 균등 */
+}
+
+
+.calendar th {
+  padding: 4px 0; /* 요일 여백 줄이기 */
+  font-weight: 400;
+}
+
+.calendar td {
+  font-size: 14px;
+  height: 85px;           /* 세로 직사각형 */
+  text-align: center;     /* 가로 중앙 정렬 */
+  vertical-align: top;    /* 세로 상단 정렬 */
+  padding-top: 2px;       /* 상단 여백 */
+  box-sizing: border-box;
+  font-weight: 200;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  background: #000;
+  border-radius: 50%;
+  margin: 2px auto 0; /* 날짜 바로 아래 배치 */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;  /* 가로 중앙 정렬 */
+  align-items: center;
+  gap: 20px; /* 화살표와 월표기 간 간격 */
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 14px; /* 크기 줄임 */
+  cursor: pointer;
+  padding: 0 5px;  /* 좌우 여백도 줄임 */
+}
+
+#month-year {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* 이벤트 박스 */
+/* 팝업 박스: 항상 화면(달력) 중앙 */
+#event-box {
+  display: none;
+  position: fixed;                 /* 중앙 고정 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #bfcdd6;
+  border-radius: 8px;
+  padding: 16px 20px 14px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  min-width: 260px;
+  max-width: min(90vw, 420px);
+  max-height: 70vh;                /* 내용 길면 내부 스크롤 */
+  overflow: auto;
+  z-index: 10000;
+}
+
+#event-backdrop {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.2);
+  z-index: 9999;
+}
+#event-backdrop.is-open { display: block; }
+
+/* 제목 */
+.event-title {
+  font-weight: 400;
+  margin-bottom: 10px;
+  padding-right: 24px; /* 닫기 버튼 자리 확보 */
+}
+
+/* 닫기 버튼 (이미지든 글자든 적용 가능) */
+#close-event {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url('../image/close.png') no-repeat center;
+  background-size: contain; /* 아이콘이 버튼 크기에 맞게 */
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+/* 라벨/내용 스타일 */
+.event-label {
+  font-weight: 400;
+}
+
+.event-detail {
+  font-weight: 200;
+}
+
+/*하단고정*/
+.fixed-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* 왼쪽 → 오른쪽 */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.fixed-icons img {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fixed-icons img:hover {
+  transform: scale(1.1);
+}
+
+.menu-popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 90px; /* left → right로 변경 */
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  padding: 8px 0;
+  z-index: 2000;
+}
+
+.menu-popup a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Melodrame', serif;
+  font-size: 20px;
+}
+
+.menu-popup a:hover {
+  background: #f0f0f0;
+}
+
+/* iOS 하단 여백 대응 */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  #profile-tab {
+    padding-bottom: calc(40px + env(safe-area-inset-bottom));
+  }
+}

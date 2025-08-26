@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홍성원 인터뷰</title>
+  <link rel="stylesheet" href="styles/interview.css" />
+</head>
+<body>
+
+  <!-- 좌측 하단 고정 아이콘 -->
+  <div class="fixed-icons">
+    <a href="index.html"><img src="image/home.png" alt="Home"></a>
+    <img src="image/menu.png" alt="Menu" id="menu-btn">
+  </div>
+
+  <!-- 메뉴 팝업 -->
+  <div id="menu-popup" class="menu-popup">
+    <a href="profile.html">Profile</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="interview.html">Interview</a>
+    <a href="videos.html">Videos</a>
+    <a href="game.html">Game</a>
+  </div>
+  <div class="profile-page">
+    
+    <!-- 좌측 레일 -->
+    <aside class="left-rail">
+      <div class="rail-inner">
+        <span class="side-name">Hong Sungwon</span>
+        <span class="side-profile">Interview</span>
+      </div>
+    </aside>
+
+    <!-- 우측 본문 -->
+    <main id="interview-tab">
+      <ul class="interview-list">
+        <li>
+          <a href="https://mfocus.kr/culture/performance/musical/9731/" target="_blank">
+            [인터뷰] “오래 가는 배우가 되고 싶어요.” 뮤지컬 배우 홍성원
+          </a>
+        </li>
+        <li>
+          <a href="https://www.yna.co.kr/view/AKR20240123144100005" target="_blank">
+            홍성원 “성소수자 연기, 편견 남기지 않으려 대표 파고들었죠”
+          </a>
+        </li>
+        <li>
+          <a href="https://ch.yes24.com/Article/Details/81109" target="_blank">
+            [더뮤지컬] 홍성원, 오래도록 살아 숨쉬기 위해
+          </a>
+        </li>
+        <li>
+          <a href="https://www.xportsnews.com/article/2020261" target="_blank">
+            '미지의 서울' 홍성원 "기대 없었는데... 김태이 역도 아니었다" (인터뷰①)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.xportsnews.com/article/2020262" target="_blank">
+            홍성원 “박보영의 ‘빅팬’…지금은 따로 술도 마신다” (인터뷰②)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.xportsnews.com/article/2020263" target="_blank">
+            홍성원 "미지의 서울"이 아니었음 뒷풀이 고백 사건? (인터뷰③)
+          </a>
+        </li>
+        <li>
+          <a href="https://m.news.nate.com/view/20250630n24418" target="_blank">
+            '미지의 서울' 홍성원 "낯선 여행, 또 다른 나를 만났죠"
+          </a>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuPopup = document.getElementById('menu-popup');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isVisible = menuPopup.style.display === 'block';
+      menuPopup.style.display = isVisible ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', () => {
+      menuPopup.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

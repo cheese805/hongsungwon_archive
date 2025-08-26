@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<head>
+    <html lang="ko">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홍성원 필모그라피</title>
+    <link rel="stylesheet" href="styles/filmography.css" />
+</head>
+  <!-- 좌측 하단 고정 아이콘 -->
+  <div class="fixed-icons">
+    <a href="index.html"><img src="image/home.png" alt="Home"></a>
+    <img src="image/menu.png" alt="Menu" id="menu-btn">
+  </div>
+
+  <!-- 메뉴 팝업 -->
+  <div id="menu-popup" class="menu-popup">
+    <a href="profile.html">Profile</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="interview.html">Interview</a>
+    <a href="videos.html">Videos</a>
+    <a href="game.html">Game</a>
+  </div>
+<body>
+  <div class="profile-page">
+    <!-- 좌측 레일 -->
+    <aside class="left-rail">
+      <div class="rail-inner">
+        <span class="side-name">Hong Sungwon</span>
+        <span class="side-profile">Filmography</span>
+      </div>
+    </aside>
+
+    <!-- 우측 본문 -->
+    <main id="filmography-tab">
+
+      <!-- 카테고리 버튼 -->
+      <div class="film-category">
+        <button class="active" data-category="musical">뮤지컬</button>
+        <button data-category="play">연극</button>
+        <button data-category="drama">드라마</button>
+        <button data-category="etc">기타</button>
+      </div>
+      <!-- 작품 리스트 -->
+      <div class="film-list">
+
+        <!-- 작품 카드 -->
+        <div class="film-item" data-category="musical">
+          <img src="image/excalibur.jpg" alt="엑스칼리버 포스터" class="film-poster" data-profiles="image/excalibur.jpg">
+          <div class="film-info">
+            <div class="film-title">엑스칼리버</div>
+            <div class="film-period">2019.06.15 ~ 08.04</div>
+            <div class="film-place">세종문화회관 대극장</div>
+            <div class="film-role">학생 앙상블</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/midnight1_poster.jpg"
+            alt="미드나잇 포스터"
+            class="film-poster"
+            data-profiles="image/midnight1_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">미드나잇 : 액터뮤지션</div>
+            <div class="film-period">2022.03.02 ~ 05.30</div>
+            <div class="film-place">예그린씨어터</div>
+            <div class="film-role">플레이어 3</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/midnight2_poster.jpg" alt="미드나잇 포스터" class="film-poster" data-profiles="image/midnight2_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">미드나잇 : 액터뮤지션</div>
+            <div class="film-period">2022.12.15 ~ 12.31</div>
+            <div class="film-place">이화여고 100주년 기념관</div>
+            <div class="film-role">맨</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/kyultu_poster.jpg" alt="결투 포스터" class="film-poster" data-profiles="image/kyultu_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">결투</div>
+            <div class="film-period">2023.02.05 ~ 04.17</div>
+            <div class="film-place">드림아트센터 2관</div>
+            <div class="film-role">취선 외</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/thefiction_poster.jpg" alt="더픽션 포스터" class="film-poster" data-profiles="image/thefiction_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">더 픽션</div>
+            <div class="film-period">2023.06.23 ~ 09.17</div>
+            <div class="film-place">예스24스테이지 1관</div>
+            <div class="film-role">휴 대커</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/oz1_poster.jpg" alt="오즈 포스터" class="film-poster" data-profiles="image/oz1_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">오즈</div>
+            <div class="film-period">2023.07.11 ~ 09.17</div>
+            <div class="film-place">TOM 2관</div>
+            <div class="film-role">양철</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/black_poster.jpg" alt="블랙메리포핀스 포스터" class="film-poster" data-profiles="image/black_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">블랙메리포핀스</div>
+            <div class="film-period">2023.09.21 ~ 12.03</div>
+            <div class="film-place">서경대학교<br>공연예술센터 스콘 1관</div>
+            <div class="film-role">요나스</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/enha_poster.jpg" alt="은하철도의 밤 포스터" class="film-poster" data-profiles="image/enha_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">은하철도의 밤</div>
+            <div class="film-period">2023.12.20 ~ 2024.03.03</div>
+            <div class="film-place">예스24스테이지 1관</div>
+            <div class="film-role">조반니</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/oz2_poster.jpg" alt="오즈 포스터" class="film-poster" data-profiles="image/oz2_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">오즈</div>
+            <div class="film-period">2024.02.27 ~ 05.06</div>
+            <div class="film-place">TOM 2관</div>
+            <div class="film-role">양철</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/clover_poster.jpg" alt="클로버 포스터" class="film-poster" data-profiles="image/clover_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">클로버</div>
+            <div class="film-period">2024.11.05 ~ 2025.01.26</div>
+            <div class="film-place">대학로 자유극장</div>
+            <div class="film-role">정인</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/myun_poster.jpg" alt="면면면 포스터" class="film-poster" data-profiles="image/myun_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">면면면</div>
+            <div class="film-period">2024.12.01 ~ 12.16</div>
+            <div class="film-place">국립정동극장 세실</div>
+            <div class="film-role">항필</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/mumyung_poster.jpg" alt="무명준희 포스터" class="film-poster" data-profiles="image/mumyung_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">무명, 준희</div>
+            <div class="film-period">2025.01.24 ~ 04.06</div>
+            <div class="film-place">링크아트센터드림 드림2관</div>
+            <div class="film-role">준희</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/catsand_poster.jpg" alt="개와고양이의시간 포스터" class="film-poster" data-profiles="image/catsand_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">개와 고양이의 시간</div>
+            <div class="film-period">2025.05.21 ~ 08.10</div>
+            <div class="film-place">더굿씨어터</div>
+            <div class="film-role">랩터</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/burnthe_poster.jpg" alt="번더위치 포스터" class="film-poster" data-profiles="image/burnthe_profile1.jpg,image/burnthe_profile2.jpg">
+          <div class="film-info">
+            <div class="film-title">번 더 위치</div>
+            <div class="film-period">2023.07.08 ~ 10.12</div>
+            <div class="film-place">홍익대<br>대학로 아트센터 소극장</div>
+            <div class="film-role">블랭크 & 딜런</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="musical">
+          <img src="image/deca_poster.jpg" alt="데카브리 포스터" class="film-poster" data-profiles="image/deca_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">데카브리</div>
+            <div class="film-period">2025.09.10 ~ 11.30</div>
+            <div class="film-place">NOL서경스퀘어<br>스콘 1관</div>
+            <div class="film-role">아카키</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="play">
+          <img src="image/donqui_poster.jpg" alt="돈키호테 포스터" class="film-poster" data-profiles="image/donqui_poster.jpg">
+          <div class="film-info">
+            <div class="film-title">돈키호테<br>미치거나 즐기거나</div>
+            <div class="film-period">2021 12.08 ~ 12.11</div>
+            <div class="film-place">일터소극장</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="play">
+          <img src="image/wife_poster.jpg" alt="와이프 포스터" class="film-poster" data-profiles="image/wife_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">와이프</div>
+            <div class="film-period">2023.12.26 ~ 2024.02.08</div>
+            <div class="film-place">LG아트센터<br>서울 U+ 스테이지</div>
+            <div class="film-role">에릭 & 카스</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="play">
+          <img src="image/bcalss_poster.jpg" alt="비클래스 포스터" class="film-poster" data-profiles="image/bclass_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">비클래스</div>
+            <div class="film-period">2024.02.20 ~ 05.06</div>
+            <div class="film-place">링크아트센터드림 드림2관</div>
+            <div class="film-role">김택상</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="play">
+          <img src="image/macbeth_poster.jpg" alt="맥베스 포스터" class="film-poster" data-profiles="image/mecbeth_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">맥베스</div>
+            <div class="film-period">2024.07.13 ~ 08.18</div>
+            <div class="film-place">국립극장 해오름극장</div>
+            <div class="film-role">멜컴</div>
+          </div>
+        </div>
+        
+        <div class="film-item" data-category="drama">
+          <img src="image/mijiseoul_poster.jpg" alt="미지의서울 포스터" class="film-poster" data-profiles="image/mijiseoul_poster.jpg">
+          <div class="film-info">
+            <div class="film-title">미지의 서울</div>
+            <div class="film-period">2025.05.24 ~ 06.29</div>
+            <div class="film-place">tvN</div>
+            <div class="film-role">김태이</div>
+          </div>
+        </div>
+
+         <div class="film-item" data-category="etc">
+          <img src="image/gleaming_poster.jpg" alt="글리밍 포스터" class="film-poster" data-profiles="image/gleaming_profile.jpg">
+          <div class="film-info">
+            <div class="film-title">gleaming : <br>글림의 두번째 콘서트</div>
+            <div class="film-period">2024.04.27 ~ 04.29</div>
+            <div class="film-place">동덕여대<br>공연예술센터 코튼홀</div>
+          </div>
+        </div>
+
+        <div class="film-item" data-category="etc">
+          <img src="image/fanmeeting_poster.jpg" alt="성원 포스터" class="film-poster" data-profiles="image/fanmeeting_poster.jpg">
+          <div class="film-info">
+            <div class="film-title">성원에 감사드립니다</div>
+            <div class="film-period">2024.10.25</div>
+            <div class="film-place">대학로 자유극장</div>
+        <!-- 필요 시 작품 계속 추가 -->
+      </div>
+    </main>
+  </div>
+
+    <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuPopup = document.getElementById('menu-popup');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isVisible = menuPopup.style.display === 'block';
+      menuPopup.style.display = isVisible ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', () => {
+      menuPopup.style.display = 'none';
+    });
+
+    const categoryButtons = document.querySelectorAll('.film-category button');
+    const filmItems = document.querySelectorAll('.film-item');
+
+    function filterByCategory(category) {
+    // 버튼 active 처리
+        categoryButtons.forEach(btn => {
+            if (btn.getAttribute('data-category') === category) {
+            btn.classList.add('active');
+            } else {
+            btn.classList.remove('active');
+            }
+        });
+
+        // 작품 표시/숨김 처리
+        filmItems.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+            item.style.display = 'flex';
+            } else {
+            item.style.display = 'none';
+            }
+        });
+        }
+
+        // 버튼 클릭 이벤트
+        categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            filterByCategory(category);
+        });
+    });
+
+    // 페이지 처음 로드 시 뮤지컬 기본 활성화
+    window.addEventListener('DOMContentLoaded', () => {
+    filterByCategory('musical'); // 기본값 변경 가능
+    });
+
+
+
+    const posters = document.querySelectorAll('.film-poster');
+
+    posters.forEach(poster => {
+        const originalSrc = poster.src;
+        const profileList = poster.getAttribute('data-profiles');
+        
+        if (!profileList) return; // 데이터 없으면 이벤트 안 걸음
+
+        const profiles = profileList.split(',').map(p => p.trim()); // 경로 배열로 변환
+        let index = -1; // -1 = 원본, 0부터 프로필
+
+        poster.addEventListener('click', () => {
+            index++;
+            if (index >= profiles.length) {
+            poster.src = originalSrc;
+            index = -1; // 원래 포스터로 돌아가면 다시 시작
+            } else {
+            poster.src = profiles[index];
+            }
+        });
+        });
+
+  </script>
+</body>
+</html>
+

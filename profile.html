@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홍성원 프로필</title>
+  <link rel="stylesheet" href="styles/profile.css" />
+</head>
+  <!-- 좌측 하단 고정 아이콘 -->
+  <div class="fixed-icons">
+    <a href="index.html"><img src="image/home.png" alt="Home"></a>
+    <img src="image/menu.png" alt="Menu" id="menu-btn">
+  </div>
+
+  <!-- 메뉴 팝업 -->
+  <div id="menu-popup" class="menu-popup">
+    <a href="profile.html">Profile</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="interview.html">Interview</a>
+    <a href="videos.html">Videos</a>
+    <a href="game.html">Game</a>
+  </div>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuPopup = document.getElementById('menu-popup');
+    const leftRail  = document.querySelector('.left-rail');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isVisible = menuPopup.style.display === 'block';
+      if (!isVisible && leftRail) {
+        const r = leftRail.getBoundingClientRect();
+        const centerX = r.left + r.width / 2;
+        menuPopup.style.position = 'fixed';
+        menuPopup.style.left = centerX + 'px';
+        menuPopup.style.transform = 'translateX(0)';
+        menuPopup.style.bottom = '20px';
+      }
+      menuPopup.style.display = isVisible ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', () => {
+      menuPopup.style.display = 'none';
+    });
+  </script>
+
+<body>
+  <div class="profile-page">
+    
+    <!-- 좌측 레일 -->
+    <aside class="left-rail">
+      <div class="rail-inner">
+        <span class="side-name">Hong Sungwon</span>
+        <span class="side-profile">Profile</span>
+      </div>
+    </aside>
+
+    <!-- 우측 본문 -->
+    <main id="profile-tab">
+
+      <!-- 프로필 사진 -->
+      <img class="profile-image" src="image/profile.jpeg" alt="홍성원 프로필 사진" />
+
+      <!-- 이름 -->
+      <div class="name-block">
+        <div class="name-ko">홍 성 원</div>
+        <div class="name-en">Hong Sungwon</div>
+      </div>
+
+      <!-- 기본 정보 -->
+      <div class="info">
+        <div>1999. 01. 24  |  177cm  |  INFP |  O형</div>
+        <div><strong>학력</strong> 서울예술대학교 연기전공</div>
+        <div><strong>소속사</strong> 글림 아티스트</div>
+        <div class="debut"><strong>데뷔</strong> 
+          <div class="debut-detail">2019. 06. 15.<br>뮤지컬 엑스칼리버</div>
+        </div>
+      </div>
+
+      <!-- 뮤지컬 -->
+      <div class="section">
+        <div class="section-title">뮤지컬 <span>Musical</span></div>
+        <div class="works">
+          <div class="work-row"><div class="year">2019</div><div class="titles">엑스칼리버</div></div>
+          <div class="work-row"><div class="year">2022</div><div class="titles">미드나잇 액터뮤지션</div></div>
+          <div class="work-row"><div class="year">2023</div><div class="titles">
+            결투<br>더픽션<br>오즈<br>블랙메리포핀스<br>은하철도의 밤<br>오즈
+          </div></div>
+          <div class="work-row"><div class="year">2024</div><div class="titles">
+            오즈<br>클로버<br>면면면
+          </div></div>
+          <div class="work-row"><div class="year">2025</div><div class="titles">
+            무명, 준희<br>개와 고양이의 시간<br>번 더 위치<br>데카브리
+          </div></div>
+        </div>
+      </div>
+
+      <!-- 연극 -->
+      <div class="section">
+        <div class="section-title">연극 <span>Play</span></div>
+        <div class="works">
+          <div class="work-row"><div class="year">2021</div><div class="titles">돈키호테 미치거나 즐기거나</div></div>
+          <div class="work-row"><div class="year">2023</div><div class="titles">와이프</div></div>
+          <div class="work-row"><div class="year">2024</div><div class="titles">비클래스<br>맥베스</div></div>
+        </div>
+      </div>
+
+      <!-- 드라마 -->
+      <div class="section">
+        <div class="section-title">드라마 <span>Drama</span></div>
+        <div class="works">
+          <div class="work-row"><div class="year">2025</div><div class="titles">미지의 서울</div></div>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+</body>
+</html>

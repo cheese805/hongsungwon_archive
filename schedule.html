@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>홍성원 Schedule</title>
+<link rel="stylesheet" href="styles/schedule.css">
+</head>
+<body>
+
+    <div class="fixed-icons">
+        <a href="index.html"><img src="image/home.png" alt="Home"></a>
+        <img src="image/menu.png" alt="Menu" id="menu-btn">
+    </div>
+
+    <!-- 메뉴 팝업 -->
+    <div id="menu-popup" class="menu-popup">
+        <a href="profile.html">Profile</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="filmography.html">Filmography</a>
+        <a href="interview.html">Interview</a>
+        <a href="videos.html">Videos</a>
+        <a href="game.html">Game</a>
+    </div>
+    <div class="profile-page">
+
+
+  <!-- 상단 레일 -->
+  <header class="top-rail">
+    <div class="rail-inner">
+      <span class="side-name">Hong Sunwon</span>
+      <span class="side-profile">Schedule</span>
+    </div>
+    <hr class="rail-line">
+  </header>
+
+  <!-- 캘린더 -->
+  <div class="calendar-container" >
+    <div class="calendar-header">
+      <button id="prev-month">◀</button>
+      <h2 id="month-year"></h2>
+      <button id="next-month">▶</button>
+    </div>
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body"></tbody>
+    </table>
+  </div>
+
+  <!-- 일정 상세 -->
+  <div class="event-box" id="event-box">
+    <div class="event-header">
+      <span id="event-title"></span>
+      <button id="close-event" aria-label="닫기"></button>
+    </div>
+    <div class="event-content" id="event-content"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="script/schedule.js"></script>
+</body>
+</html>

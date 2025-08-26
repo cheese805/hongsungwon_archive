@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>info & contact</title>
+  <link rel="stylesheet" href="styles/info.css" />
+</head>
+<body>
+
+  <!-- 좌측 하단 고정 아이콘 -->
+  <div class="fixed-icons">
+    <a href="index.html"><img src="image/home.png" alt="Home"></a>
+    <img src="image/menu.png" alt="Menu" id="menu-btn">
+  </div>
+
+  <!-- 메뉴 팝업 -->
+  <div id="menu-popup" class="menu-popup">
+    <a href="profile.html">Profile</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="filmography.html">Filmography</a>
+    <a href="interview.html">Interview</a>
+    <a href="videos.html">Videos</a>
+    <a href="game.html">Game</a>
+  </div>
+  <div class="profile-page">
+    
+    <!-- 좌측 레일 -->
+    <aside class="left-rail">
+      <div class="rail-inner">
+        <span class="side-name">Hong Sungwon</span>
+        <span class="side-profile">Info & Contact</span>
+      </div>
+    </aside>
+
+    <!-- 우측 본문 -->
+    <main class="info-content">
+      <h2>📌 홍성원 아카이브<br>이용 안내 &amp; 피드백</h2>
+      <p>본 페이지는 배우 홍성원의 활동을 비영리적으로 정리한 팬메이드 페이지입니다.</p>
+
+      <p>🛠 페이지 이용 오류 발견, 정보 수정 요청, 건의하고 싶은 내용이 있다면 아래 폼으로 전달해주세요.</p>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScrVnwSpcFRDuAB5Spe6JBoSZCo9CIOjbb5jLsaMVFx_4lXhg/viewform?usp=header" class="feedback-btn">📮 피드백 전달하기</a>
+    </main>
+
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuPopup = document.getElementById('menu-popup');
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isVisible = menuPopup.style.display === 'block';
+      menuPopup.style.display = isVisible ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', () => {
+      menuPopup.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
