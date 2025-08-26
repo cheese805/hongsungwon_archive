@@ -86,8 +86,8 @@ body {
 .category:first-of-type{ border-top:none; }
 .arrow-icon{ width:12px; height:auto; }
 .sub-list{ display:none; padding:0 25px 0 40px; background:#fafafa; border-top:1px solid #bfcdd6; }
-.sub-item{ padding:8px 0; font-size:15px; }
-.sub-item a{ font-size:16px; font-weight:200; text-decoration:none; color:#000; }
+.sub-item{ font-family: 'Pretendard'; padding:8px 0; font-size:15px; }
+.sub-item a{ font-family: 'Pretendard'; font-size:16px; font-weight:200; text-decoration:none; color:#000; }
 .sub-item a:hover{ text-decoration:underline; }
 
 /* ---------- 좌측 하단 아이콘: 레일 '왼쪽 칸' 중앙 ---------- */
