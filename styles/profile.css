@@ -208,11 +208,14 @@ body {
 }
 
 /* ---------- 고정 아이콘 ---------- */
-.fixed-icons{
+.fixed-icons {
   position: fixed;
   bottom: 20px;
-  left: var(--rail-center-x);
-  transform: translateX(calc(-50% - 20px));
+
+  /* 기존에는 left: 20px 등으로 돼 있었을 것 같은데, 
+     좌측 레일 중앙 기준으로 맞추려면 이 계산식 필요해 */
+  left: calc(var(--frame-left) + var(--rail-w)/2 - 12px);  /* 아이콘 크기에 따라 조정 */
+
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -226,7 +229,6 @@ body {
 }
 .fixed-icons img:hover { transform: scale(1.1); }
 
-/* ---------- 메뉴 팝업: 레일 중앙 기준 ---------- */
 /* ---------- 메뉴 팝업: 레일 중앙 기준 ---------- */
 #menu-popup {
   display: none;
